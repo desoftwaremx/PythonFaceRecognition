@@ -1,6 +1,7 @@
 from Connection.userController import *
 from Function.function import *
 from AI.recognition import Recognition
+from AI.trainer import Train
 
 
 option = {
@@ -8,6 +9,7 @@ option = {
     2:insert_user,
     3:update_user,
     4:delete_user,
+    5:Train,
     6:Recognition
     }
 
