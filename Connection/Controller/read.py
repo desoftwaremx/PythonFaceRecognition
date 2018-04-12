@@ -1,4 +1,4 @@
-from .connection import db
+from Connection.Controller.connection import db
 
 def ReadUser():
     try:
@@ -15,6 +15,6 @@ def ReadUser():
                 print("Oops!!! Something Wrong")
         db.commit()
     finally:
-        db.close()
+        print("")
 
 # ReadUser()

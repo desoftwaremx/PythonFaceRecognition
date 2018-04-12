@@ -1,4 +1,4 @@
-from .connection import db
+from Connection.Controller.connection import db
 
 def EditUser(id):
     sql = "update user set `name`=%s, `description`=%s, `age`=%s, `gender`=%s where id=%s"
@@ -15,6 +15,6 @@ def EditUser(id):
                 print('Oops! Something Went Wrong.... *is it your face?*')
             db.commit()
     finally:
-        db.close()
+        print('')
 
 # EditUser(int(input('Input Id : ')))

@@ -1,4 +1,4 @@
-from .connection import db
+from Connection.Controller.connection import db
 
 def InsertUser():
     name = input('Enter Your Name: ')
@@ -15,7 +15,7 @@ def InsertUser():
                 print("Oops! Something Wrong")
             db.commit()
     finally:
-        db.close()
+        print('')
 
 
 # InsertItem();

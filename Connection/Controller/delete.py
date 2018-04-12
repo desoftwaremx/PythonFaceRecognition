@@ -1,4 +1,4 @@
-from .connection import db
+from Connection.Controller.connection import db
 
 def DeleteUser(id):
     try:
@@ -11,6 +11,6 @@ def DeleteUser(id):
                 print('Oops!! Something went wrong... Is it Your Face?')
         db.commit()
     finally:
-        db.close()
+        print('')
 
 # DeleteUser(input('User Id : '))

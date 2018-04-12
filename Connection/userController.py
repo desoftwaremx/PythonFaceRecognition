@@ -1,15 +1,16 @@
-from .Controller.connection import db
-from .Controller.read import ReadUser
-from .Controller.insert import InsertUser
-from .Controller.delete import DeleteUser
-from .Controller.edit import EditUser
+from Connection.Controller.connection import db
+from Connection.Controller.read import ReadUser
+from Connection.Controller.insert import InsertUser
+from Connection.Controller.delete import DeleteUser
+from Connection.Controller.edit import EditUser
+from Connection.Controller.get_user import GetUser
 
 def check_connections():
     result = 0;
     try:
         try:
             db
-            print("connection Success")
+            print("Connection Established")
             result = 1
         except (RuntimeError, TypeError, NameError):
             print('something happened')
@@ -28,4 +29,8 @@ def update_user():
 def delete_user():
     return DeleteUser(int(input("Enter Id to update : ")))
 
-check_connections()
+def get_user(id):
+    return GetUser(id);
+
+def CloseDatabase():
+    return db.close()
